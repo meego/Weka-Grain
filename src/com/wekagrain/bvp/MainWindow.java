@@ -20,8 +20,10 @@
 package com.wekagrain.bvp;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.Rectangle;
 import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -42,6 +44,8 @@ import javax.swing.JSeparator;
 import javax.swing.JSpinner;
 import javax.swing.JTextArea;
 import javax.swing.JTextPane;
+import javax.swing.JScrollPane;
+import javax.swing.JScrollBar;
 
 public class MainWindow {
 
@@ -104,7 +108,7 @@ public class MainWindow {
 		txtpnSg.setBackground(SystemColor.info);
 		txtpnSg.setText(infoStr);
 		txtpnSg.setBounds(402, 81, 240, 239);
-		frame.getContentPane().add(txtpnSg);
+		//frame.getContentPane().add(txtpnSg);
 		java.net.URL imgURL = getClass().getResource("grain.png");
 		 ic=new ImageIcon(imgURL,"LOTS OF GRAIN!");
 		
@@ -139,6 +143,13 @@ public class MainWindow {
 		comboBox.setBounds(174, 296, 69, 24);
 		frame.getContentPane().add(comboBox);
 		
+	
+	
+		
+		
+		JScrollPane jsp=new JScrollPane(txtpnSg);
+		jsp.setBounds(new Rectangle(402, 81, 240, 239));
+		frame.getContentPane().add(jsp);
 		JMenuBar menuBar = new JMenuBar();
 		frame.setJMenuBar(menuBar);
 		
@@ -243,6 +254,5 @@ public class MainWindow {
 	            }
 	        
 	    }
-
 }
 
