@@ -30,7 +30,18 @@ public class GrainStringParser {
 	private int attribInfo[];
 	RandomDataProvider rdp;
 	int typeOfFile;
-	private static final int  ID=1,DEPT=2,YES_NO=3,TRUE_FALSE=4,GENDER=5,PHONE=6,NAME=7,COMPLANG=8,GROCERY=9,STATE=10,MARKS=11,WEATHER=12;
+	private static final int  
+	ID=1,
+	DEPT=2,
+	YES_NO=3,
+	TRUE_FALSE=4,
+	GENDER=5,PHONE=6,
+	NAME=7,
+	COMPLANG=8,
+	GROCERY=9,
+	STATE=10,
+	MARKS=11,
+	WEATHER=12;
 	GrainStringParser(String grain,int numberOfRecords,int typeOfFile,File f)
 	{
 	rdp=new RandomDataProvider();
