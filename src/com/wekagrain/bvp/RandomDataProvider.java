@@ -80,6 +80,34 @@ public class RandomDataProvider {
 	//sg
 	public String getRandomName()
 	{
+		boolean available=true;
+		String  name;
+		while(true)  //loop till you get a name
+		{
+		name=randomNameGenerator(); //get a name
+		available=true;
+		//check if the name is already taken
+		for(int i=0;i<this.lengthNamesTaken;i++)
+		{
+		
+			if(name.equals(namesTaken[i]))
+		{
+			available=false;
+			break; //break out
+		}
+		}
+
+		if(available)
+		{
+			namesTaken[lengthNamesTaken]=name;
+			lengthNamesTaken++;
+			return name;
+		}
+		}
+		
+	}
+	private String randomNameGenerator()
+	{
 		String surnames[]={ "Acharya", "Adiga", "Agarwal", "Ahluwalia", "Ahuja", "Arora", "Bandopadhyay", "Banerjee", "Bharadwaj", "Bhatt","Khan","Husain","Bisram","Peer","Mattoo",
 				"Bhattacharya", "Mahajan","Yadav","Ranjan","Sachdeva","Chaturvedi", "Chattopadhyay", "Chopra", "Desai", "Deshpande", "Devar", "Dhawan", "Dubashi", "Dutta", "Dwivedi", 
 				"Gandhi", "Gill", "Gowda", "Guha", "Guneta", "Gupta", "Iyer", "Iyengar", "Jain", "Jha", "Johar", "Joshi", "Kakkar", "Kapoor", "Kaul", 
@@ -93,13 +121,16 @@ public class RandomDataProvider {
 		
 		int index=r.nextInt(1000)%l;
 		String name; 
-		boolean available=true;
 		char fn=(char)sname;
+		if(fn=='X')
+			fn='B';
 		int decide=r.nextInt(1000)%2;
 		if(decide==1)
 		{
 			sname=r.nextInt(100)%26+65;
 			char fn1=(char)sname;
+			if(fn1=='X')
+				fn1='S';
 			name=fn + ". " +fn1+" "+surnames[index];
 				
 		}
@@ -107,28 +138,7 @@ public class RandomDataProvider {
 		{
 		name=fn + ". " +surnames[index];
 		}
-		
-		/* May be slow*/
-		//check if the name is already taken
-		for(int i=0;i<this.lengthNamesTaken;i++)
-		{
-		if(name.equals(namesTaken[i]))
-		{
-			available=false;
-			break;
-		}
-		}
-		
-		if(available)
-		{
-			namesTaken[this.lengthNamesTaken]=name;
-
-			this.lengthNamesTaken++;
-			return name;
-		}
-		else
-			return getRandomName();
-		
+		return name;
 	}
 	public String getRandomPhone()
 	{
