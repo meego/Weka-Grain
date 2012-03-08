@@ -197,5 +197,12 @@ public class RandomDataProvider {
 		}
 		return res.toString();
 	}
-
+	public String getRandomPublisher()
+	{
+		String publisher[]={"Tata McGraw Hill","O'Reily","PHI","Pearson","BPB"};
+		Random r=new Random();
+		int index=(r.nextInt(10000))%publisher.length;
+		return publisher[index];
+		
+	}
 }

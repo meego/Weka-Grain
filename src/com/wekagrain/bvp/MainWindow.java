@@ -20,7 +20,6 @@
 package com.wekagrain.bvp;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Rectangle;
@@ -40,12 +39,11 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
 import javax.swing.JSeparator;
 import javax.swing.JSpinner;
 import javax.swing.JTextArea;
 import javax.swing.JTextPane;
-import javax.swing.JScrollPane;
-import javax.swing.JScrollBar;
 
 public class MainWindow {
 
@@ -102,7 +100,7 @@ public class MainWindow {
 		String infoStr="Data Types Available\n1. name : Name  \n2. int_id : Integer ID" +
 				"\n3. dept: Department\n4. yn : Yes /No\n5. tf : True / False\n6. gender :" +
 				" Gender\n7. ph : Mobile Phone Number\n8. clang : Computer Language\n9. grocery : Grocery Item\n10. state : Indian State and UT" +
-				"\n11. weather:Weather Conditions\n12. marks : Marks (out of 100) ";
+				"\n11. weather:Weather Conditions\n12. marks : Marks (out of 100)\n13.publisher : Name of a Publisher ";
 		JTextPane txtpnSg = new JTextPane();
 		txtpnSg.setEditable(false);
 		txtpnSg.setBackground(SystemColor.info);

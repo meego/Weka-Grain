@@ -41,7 +41,8 @@ public class GrainStringParser {
 	GROCERY=9,
 	STATE=10,
 	MARKS=11,
-	WEATHER=12;
+	WEATHER=12,
+	PUBLISHER=13;
 	GrainStringParser(String grain,int numberOfRecords,int typeOfFile,File f)
 	{
 	rdp=new RandomDataProvider();
@@ -119,6 +120,10 @@ public class GrainStringParser {
 			{
 				attribInfo[i]=WEATHER;
 			}
+			else if(nameType[1].equalsIgnoreCase("publisher"))
+			{
+				attribInfo[i]=PUBLISHER;
+			}
 			System.out.println(this.attributeList[i]);
 			i++;	
 		
@@ -185,10 +190,15 @@ public class GrainStringParser {
 					name="WEATHER_"+i.toString();
 					type="{\"Windy\",\"Cloudy\",\"Sunny\",\"Chilly\"}";
 					break;
-					case MARKS:
+				case MARKS:
 					name="MARKS_"+i.toString();
 					type="numeric";
 					break;
+				case PUBLISHER:
+					name="PUBLISHER_"+i.toString();
+					type="{\"Tata McGraw Hill\",\"O'Reily\",\"PHI\",\"Pearson\",\"BPB\"}";
+					break;
+				
 				}
 				pw.write("@ATTRIBUTE "+name+" "+type+"\n");
 				
@@ -278,6 +288,8 @@ public class GrainStringParser {
 					case MARKS:
 						attribVal=rdp.getRandomMarks();
 						break;
+					case PUBLISHER:
+						attribVal=rdp.getRandomPublisher();
 					}  //got the value for attribute,now write it 
 			
 					if(j==(this.numberOfAttributes-1))
