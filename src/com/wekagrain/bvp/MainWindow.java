@@ -44,12 +44,40 @@ import javax.swing.JSeparator;
 import javax.swing.JSpinner;
 import javax.swing.JTextArea;
 import javax.swing.JTextPane;
+import javax.swing.UIManager;
 
 public class MainWindow {
 
 	private JFrame frame;
 	 JFileChooser fc;
 	 ImageIcon ic;
+	 /*add the name of the datatype you add to this list
+	 follow -> 
+	 \n<number>.<space> name_of_data_type : Short Description
+	 */
+	 private static final String dataTypeList=
+		"Data Types Available" +
+		"\n1.   name : Name" +
+		"\n2.   int_id : Integer ID"+
+		"\n3.   dept: Department" +
+		"\n4.   yn : Yes /No" +
+		"\n5.   tf : True / False" +
+		"\n6.   gender : Gender" +
+		"\n7.   ph : Mobile Phone Number" +
+		"\n8.   clang : Computer Language" +
+		"\n9.   grocery : Grocery Item" +
+		"\n10. state : Indian State and UT" +
+		"\n11. weather:Weather Conditions" +
+		"\n12. marks : Marks (out of 100)" +
+		"\n13. publisher : Name of a Publisher ";
+	 //_______________________________________________________
+	 private static final  String aboutWekaGrainMessage="Weka Grain (c) generates (random) data " +
+		"and can be used for \nstudying data analysers like weka (These guys like it when they are given data in tons :) )" +
+		"\n                         current Version 1.1\n                         DEPT OF CSE ,BVCOE, NEW DELHI";
+	 //_______________________________________________________
+	 private static final  String helpMessage="\nThe format is \"attribute name:datatype\" with attribute names seperated " +
+		"by a semicolon (;)\n\neg \"emp_id:int_id;emp_name:name;emp_ph:ph;emp_mgr:yn\"\n\nPlease note that there should not be any space in the attribute name\nIn case the csv file generated is incorrect,check your grain string and try again";
+
 	 private String helpFileName;
 	/**
 	 * Launch the application.
@@ -81,7 +109,7 @@ public class MainWindow {
 		helpFileName="/home/aman/weka/help.htm";
 		 fc = new JFileChooser();
 		frame = new JFrame();
-		frame.getContentPane().setBackground(new Color(238, 232, 170));
+		frame.getContentPane().setBackground(UIManager.getColor("ToolTip.backgroundInactive"));
 		frame.setBounds(150, 150, 671, 444);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
@@ -97,16 +125,11 @@ public class MainWindow {
 		JLabel lblEnterYourGrain = new JLabel("Enter Your Grain String");
 		lblEnterYourGrain.setBounds(50, 81, 175, 15);
 		frame.getContentPane().add(lblEnterYourGrain);
-		String infoStr="Data Types Available\n1. name : Name  \n2. int_id : Integer ID" +
-				"\n3. dept: Department\n4. yn : Yes /No\n5. tf : True / False\n6. gender :" +
-				" Gender\n7. ph : Mobile Phone Number\n8. clang : Computer Language\n9. grocery : Grocery Item\n10. state : Indian State and UT" +
-				"\n11. weather:Weather Conditions\n12. marks : Marks (out of 100)\n13.publisher : Name of a Publisher ";
 		JTextPane txtpnSg = new JTextPane();
 		txtpnSg.setEditable(false);
-		txtpnSg.setBackground(SystemColor.info);
-		txtpnSg.setText(infoStr);
+		txtpnSg.setBackground(UIManager.getColor("Tree.line"));
+		txtpnSg.setText(dataTypeList);
 		txtpnSg.setBounds(402, 81, 240, 239);
-		//frame.getContentPane().add(txtpnSg);
 		java.net.URL imgURL = getClass().getResource("grain.png");
 		 ic=new ImageIcon(imgURL,"LOTS OF GRAIN!");
 		
@@ -140,11 +163,6 @@ public class MainWindow {
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"arff", "csv"}));
 		comboBox.setBounds(174, 296, 69, 24);
 		frame.getContentPane().add(comboBox);
-		
-	
-	
-		
-		
 		JScrollPane jsp=new JScrollPane(txtpnSg);
 		jsp.setBounds(new Rectangle(402, 81, 240, 239));
 		frame.getContentPane().add(jsp);
@@ -159,10 +177,8 @@ public class MainWindow {
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				String aboutMessage="Weka Grain (c) generates (random) data " +
-						"and can be used for \nstudying data analysers like weka (These guys like it when they are given data in tons :) )" +
-						"\n                         current Version 1.1\n                         DEPT OF CSE ,BVCOE, NEW DELHI";
-				JOptionPane.showMessageDialog(frame,aboutMessage,"About Weka Grain",JOptionPane.INFORMATION_MESSAGE,ic );
+				
+				JOptionPane.showMessageDialog(frame,aboutWekaGrainMessage,"About Weka Grain",JOptionPane.INFORMATION_MESSAGE,ic );
 				
 			}
 			
@@ -199,9 +215,7 @@ public class MainWindow {
 			public void actionPerformed(ActionEvent ae)
 			{
 				
-				String helpMessage="\nThe format is \"attribute name:datatype\" with attribute names seperated " +
-						"by a semicolon (;)\n\neg \"emp_id:int_id;emp_name:name;emp_ph:ph;emp_mgr:yn\"\n\nPlease note that there should not be any space in the attribute name\nIn case the csv file generated is incorrect,check your grain string and try again";
-				JOptionPane.showMessageDialog(frame,helpMessage ,"Writing the Grain String (it's easy :) )", JOptionPane.INFORMATION_MESSAGE,ic);
+				JOptionPane.showMessageDialog(frame,helpMessage ,"Writing the Grain String", JOptionPane.INFORMATION_MESSAGE,ic);
 			}
 		});
 		btnGetCsv.addActionListener(new ActionListener()
