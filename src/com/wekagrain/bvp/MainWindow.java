@@ -55,6 +55,7 @@ public class MainWindow {
 	 follow -> 
 	 \n<number>.<space> name_of_data_type : Short Description
 	 */
+	 //____________________________________________________
 	 private static final String dataTypeList=
 		"Data Types Available" +
 		"\n1.   name : Name" +
@@ -71,12 +72,14 @@ public class MainWindow {
 		"\n12. marks : Marks (out of 100)" +
 		"\n13. publisher : Name of a Publisher ";
 	 //_______________________________________________________
-	 private static final  String aboutWekaGrainMessage="Weka Grain (c) generates (random) data " +
-		"and can be used for \nstudying data analysers like weka (These guys like it when they are given data in tons :) )" +
-		"\n                         current Version 1.1\n                         DEPT OF CSE ,BVCOE, NEW DELHI";
+	 private static final  String aboutWekaGrainMessage=
+		 "Weka Grain (c) generates (random) data " +
+		"and can be used for studying data analysers \nlike weka or for generating large databases for practising queries. " +
+		"\ncurrent Version 1.1\nDEPT OF CSE ,BVCOE, NEW DELHI";
 	 //_______________________________________________________
 	 private static final  String helpMessage="\nThe format is \"attribute name:datatype\" with attribute names seperated " +
-		"by a semicolon (;)\n\neg \"emp_id:int_id;emp_name:name;emp_ph:ph;emp_mgr:yn\"\n\nPlease note that there should not be any space in the attribute name\nIn case the csv file generated is incorrect,check your grain string and try again";
+		"by a semicolon (;)\n\neg   \"emp_id:int_id;emp_name:name;emp_ph:ph;emp_mgr:yn\"\nWill generate an simple employee record having attributes like id,phone number etc." +
+		"\n\nPlease note that there should not be any space in the attribute name\nIn case the csv file generated is incorrect,check your grain string and try again";
 
 	 private String helpFileName;
 	/**
