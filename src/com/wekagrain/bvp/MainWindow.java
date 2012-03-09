@@ -45,6 +45,7 @@ import javax.swing.JSpinner;
 import javax.swing.JTextArea;
 import javax.swing.JTextPane;
 import javax.swing.UIManager;
+import javax.swing.SwingConstants;
 
 public class MainWindow {
 
@@ -109,7 +110,7 @@ public class MainWindow {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		helpFileName="/home/aman/weka/help.htm";
+		helpFileName="https://github.com/appliedXml/Weka-Grain/wiki";
 		 fc = new JFileChooser();
 		frame = new JFrame();
 		frame.getContentPane().setBackground(UIManager.getColor("ToolTip.backgroundInactive"));
@@ -117,22 +118,25 @@ public class MainWindow {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		final JTextArea txtrSg = new JTextArea();
-		txtrSg.setForeground(SystemColor.textHighlight);
-		txtrSg.setToolTipText("ATTRIBUTE_NAME:DATATYPE");
-		txtrSg.setBackground(Color.WHITE);
-		txtrSg.setFont(new Font("SansSerif", Font.BOLD, 15));
-		txtrSg.setLineWrap(true);
-		txtrSg.setBounds(27, 108, 240, 150);
-		frame.getContentPane().add(txtrSg);
+		final JTextArea grainStringInputArea = new JTextArea();
+		grainStringInputArea.setForeground(SystemColor.textHighlight);
+		grainStringInputArea.setToolTipText("ATTRIBUTE_NAME:DATATYPE");
+		grainStringInputArea.setBackground(Color.WHITE);
+		grainStringInputArea.setFont(new Font("SansSerif", Font.BOLD, 15));
+		grainStringInputArea.setLineWrap(true);
+		grainStringInputArea.setBounds(27, 108, 240, 150);
+		JScrollPane jspForInput=new JScrollPane(grainStringInputArea);
+		jspForInput.setBounds(new Rectangle(27, 108, 240, 150));
+		frame.getContentPane().add(jspForInput);
+		
 		JLabel lblEnterYourGrain = new JLabel("Enter Your Grain String");
 		lblEnterYourGrain.setBounds(50, 81, 175, 15);
 		frame.getContentPane().add(lblEnterYourGrain);
-		JTextPane txtpnSg = new JTextPane();
-		txtpnSg.setEditable(false);
-		txtpnSg.setBackground(UIManager.getColor("Tree.line"));
-		txtpnSg.setText(dataTypeList);
-		txtpnSg.setBounds(402, 81, 240, 239);
+		JTextPane txtpnDataTypeList = new JTextPane();
+		txtpnDataTypeList.setEditable(false);
+		txtpnDataTypeList.setBackground(UIManager.getColor("Tree.line"));
+		txtpnDataTypeList.setText(dataTypeList);
+		txtpnDataTypeList.setBounds(402, 81, 240, 239);
 		java.net.URL imgURL = getClass().getResource("grain.png");
 		 ic=new ImageIcon(imgURL,"LOTS OF GRAIN!");
 		
@@ -143,12 +147,12 @@ public class MainWindow {
 		frame.getContentPane().add(lblWekaGrainfoodFor);
 		
 		final JSpinner spinner = new JSpinner();
-		spinner.setBounds(174, 268, 69, 20);
+		spinner.setBounds(174, 268, 93, 20);
 		spinner.setValue((Integer)3);
 		frame.getContentPane().add(spinner);
 		
-		JLabel lblSelectNumberOf = new JLabel("How many records?");
-		lblSelectNumberOf.setBounds(27, 273, 167, 15);
+		JLabel lblSelectNumberOf = new JLabel("Number Of Records");
+		lblSelectNumberOf.setBounds(27, 270, 143, 15);
 		frame.getContentPane().add(lblSelectNumberOf);
 		JButton btnGetCsv = new JButton("Generate Data");
 		btnGetCsv.setBounds(291, 352, 152, 25);
@@ -158,15 +162,15 @@ public class MainWindow {
 		separator.setBounds(291, 63, -11, 145);
 		frame.getContentPane().add(separator);
 		
-		JLabel lblTypeOfRecord = new JLabel("Type Of Record File");
-		lblTypeOfRecord.setBounds(27, 305, 143, 15);
+		JLabel lblTypeOfRecord = new JLabel("Output File Format");
+		lblTypeOfRecord.setBounds(27, 304, 143, 20);
 		frame.getContentPane().add(lblTypeOfRecord);
 		
 		final JComboBox comboBox = new JComboBox();
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"arff", "csv"}));
-		comboBox.setBounds(174, 296, 69, 24);
+		comboBox.setBounds(174, 302, 93, 24);
 		frame.getContentPane().add(comboBox);
-		JScrollPane jsp=new JScrollPane(txtpnSg);
+		JScrollPane jsp=new JScrollPane(txtpnDataTypeList);
 		jsp.setBounds(new Rectangle(402, 81, 240, 239));
 		frame.getContentPane().add(jsp);
 		JMenuBar menuBar = new JMenuBar();
@@ -225,7 +229,7 @@ public class MainWindow {
 		{
 		public void actionPerformed(ActionEvent ae)
 		{
-			String grain=txtrSg.getText();
+			String grain=grainStringInputArea.getText();
 			if(grain.length()==0)
 			{
 				JOptionPane.showMessageDialog(frame,"No Grain String Entered !","Are You Testing Me?",JOptionPane.INFORMATION_MESSAGE,ic );
