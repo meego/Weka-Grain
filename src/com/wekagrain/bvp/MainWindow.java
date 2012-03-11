@@ -45,7 +45,6 @@ import javax.swing.JSpinner;
 import javax.swing.JTextArea;
 import javax.swing.JTextPane;
 import javax.swing.UIManager;
-import javax.swing.SwingConstants;
 
 public class MainWindow {
 
