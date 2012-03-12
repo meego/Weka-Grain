@@ -112,7 +112,7 @@ public class MainWindow {
 		helpFileName="/home/aman/weka/help.htm";
 		 fc = new JFileChooser();
 		frame = new JFrame();
-		frame.getContentPane().setBackground(UIManager.getColor("ToolTip.backgroundInactive"));
+		frame.getContentPane().setBackground(Color.RED);
 		frame.setBounds(150, 150, 671, 444);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
