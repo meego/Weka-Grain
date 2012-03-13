@@ -62,7 +62,7 @@ public class RandomDataProvider {
 	}
 	public String getRandomComputerLanguage()
 	{
-		String lang[]={"C","C++","C#","Java","Python","php","asm","VHDL","Shell","JavaScript","ASP","Lua"};
+		String lang[]={"C","C++","C#","Java","Python","php","asm","VHDL","Shell","JavaScript","ASP","Lua","Lisp","Scheme"};
 		Random r=new Random();
 		int index=(r.nextInt(10000))%lang.length;
 		return lang[index];
@@ -70,7 +70,7 @@ public class RandomDataProvider {
 	public String getRandomGroceryItem()
 	{
 	String grocery[]={"Milk","Bread","Honey","Butter","Biscuits","Nuts","Pie","Cake","Juice","Eggs","Fruit"
-			,"IceCream","Coffee","Tea"};
+			,"IceCream","Coffee","Tea","Cheese"};
 	Random r=new Random();
 	int index=(r.nextInt(10000))%grocery.length;
 	return grocery[index];
@@ -113,7 +113,7 @@ public class RandomDataProvider {
 				"Gandhi", "Gill", "Gowda", "Guha", "Guneta", "Gupta", "Iyer", "Iyengar", "Jain", "Jha", "Johar", "Joshi", "Kakkar", "Kapoor", "Kaul", 
 				"Kaur", "Khanna", "Khatri", "Kocchar", "Mahajan", "Malik", "Menon", "Mehra", "Mishra", "Mukhopadhyay", "Nair", "Nehru", "Pandey", 
 				"Patel", "Pilla", "Prajapati","Choudhary", "Rana","Batra","Chabra","Bhatt", "Reddy", "Saini","John","Mathews","Agarwal","Dewan","Verma","Chawla",
-				"Anand","Katich","Maran","Krishnan","Sethi", "Shah", "Sharma", "Shukla", "Singh", "Sinha", "Tagore", "Talwar", "Tandon", "Trivedi", "Varrier", "Varma", "Verma"};
+				"Anand","Katich","Maran","Krishnan","Sethi", "Shah", "Sharma", "Shukla", "Singh", "Sinha", "Tagore", "Talwar", "Tandon", "Trivedi", "Varrier", "Varma", "Verma","Sareen"};
 		
 		Random r=new Random();
 		int sname=r.nextInt(100)%26+65;
@@ -162,7 +162,7 @@ public class RandomDataProvider {
 	}
 	public String getRandomWeather()
 	{
-		String weather[]={"Windy","Cloudy","Sunny","Chilly"};
+		String weather[]={"Windy","Cloudy","Sunny","Chilly","Rainy"};
 		Random r=new Random();
 		int index=(r.nextInt(10000))%weather.length;
 		return weather[index];
@@ -199,7 +199,7 @@ public class RandomDataProvider {
 	}
 	public String getRandomPublisher()
 	{
-		String publisher[]={"Tata McGraw Hill","O'Reily","PHI","Pearson","BPB"};
+		String publisher[]={"Tata McGraw Hill","O'Reily","PHI","Pearson","BPB","Katson"};
 		Random r=new Random();
 		int index=(r.nextInt(10000))%publisher.length;
 		return publisher[index];
