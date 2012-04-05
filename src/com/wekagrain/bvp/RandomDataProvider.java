@@ -192,7 +192,7 @@ public class RandomDataProvider {
 	
 		case 10:
 		case 2:
-			res=r.nextInt(10000)%11+90; //90-100
+			res=r.nextInt(10000)%11+90; //90 	-100
 			break;
 		}
 		return res.toString();
