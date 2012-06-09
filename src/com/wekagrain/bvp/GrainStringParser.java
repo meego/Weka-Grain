@@ -155,7 +155,7 @@ public class GrainStringParser {
 					break;
 				case DEPT:
 					name="DEPARTMENT_"+i.toString();
-					type="{\"CSE\",\"IT\",\"EEE\",\"ECE\",\"ICE\"}";
+					type="{\"CSE\",\"IT\",\"EEE\",\"ECE\",\"ICE\",\"MAE\",\"CAE\",\"AE\"}";
 					break;
 				case YES_NO:
 					type="{\"Yes\",\"No\"}";
@@ -175,7 +175,7 @@ public class GrainStringParser {
 					type="string";
 					break;
 				case COMPLANG:
-					type="{\"C\",\"C++\",\"C#\",\"Java\",\"Python\",\"php\",\"asm\",\"VHDL\",\"Shell\",\"JavaScript\",\"ASP\",\"Lua\"}";
+					type="{\"C\",\"C++\",\"C#\",\"Java\",\"Python\",\"php\",\"asm\",\"VHDL\",\"Shell\",\"JavaScript\",\"ASP\",\"Lua\",\"Go\",\"Scala\",\"ActionScript\",\"Ada\",\"Boo\",\"Clojure\",\"D\",\"Dart\",\"F#\",\"UnrealScript\",\"Haskell\",\"Matlab\",\"Perl\",\"CofeeScript\"}";
 					name="ComputerLanguage_"+i.toString();
 					break;
 				case GROCERY:
@@ -196,7 +196,7 @@ public class GrainStringParser {
 					break;
 				case PUBLISHER:
 					name="PUBLISHER_"+i.toString();
-					type="{\"Tata McGraw Hill\",\"O'Reily\",\"PHI\",\"Pearson\",\"BPB\"}";
+					type="{\"Tata McGraw Hill\",\"O'Reily\",\"PHI\",\"Pearson\",\"BPB\",\"Wrox\"}";
 					break;
 				
 				}
