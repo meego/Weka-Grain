@@ -113,7 +113,7 @@ public class RandomDataProvider {
 				"Gandhi", "Gill", "Gowda", "Guha", "Guneta", "Gupta", "Iyer", "Iyengar", "Jain", "Jha", "Johar", "Joshi", "Kakkar", "Kapoor", "Kaul", 
 				"Kaur", "Khanna", "Khatri", "Kocchar", "Mahajan", "Malik", "Menon", "Mehra", "Mishra", "Mukhopadhyay", "Nair", "Nehru", "Pandey", 
 				"Patel", "Pilla", "Prajapati","Choudhary", "Rana","Batra","Chabra","Bhatt", "Reddy", "Saini","John","Mathews","Agarwal","Dewan","Verma","Chawla",
-				"Anand","Katich","Maran","Krishnan","Sareen","Sethi", "Shah", "Sharma", "Shukla", "Singh", "Sinha", "Tagore", "Talwar", "Tandon", "Trivedi", "Varrier", "Varma", "Verma","Akshay","Anubhav","Katyal"};
+				"Anand","Katich","Maran","Krishnan","Sareen","Sethi", "Shah", "Sharma", "Shukla", "Singh", "Sinha", "Tagore", "Talwar", "Tandon", "Trivedi", "Varrier", "Varma", "Verma"};
 		
 		Random r=new Random();
 		int sname=r.nextInt(100)%26+65;
