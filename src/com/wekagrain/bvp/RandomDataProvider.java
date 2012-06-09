@@ -31,7 +31,7 @@ public class RandomDataProvider {
 	}
 	public String getRandomDept()
 	{
-		String dept[]={"CSE","IT","EEE","ECE","ICE"};
+		String dept[]={"CSE","IT","EEE","ECE","ICE","MAE","CE","AE"};
 		Random r=new Random();
 		int d=(r.nextInt(10000))%dept.length;
 		
@@ -62,7 +62,7 @@ public class RandomDataProvider {
 	}
 	public String getRandomComputerLanguage()
 	{
-		String lang[]={"C","C++","C#","Java","Python","php","asm","VHDL","Shell","JavaScript","ASP","Lua","Lisp","Scheme","Ruby","Basic","Cobol","Fortran"};
+		String lang[]={"C","C++","C#","Java","Python","php","asm","VHDL","Shell","JavaScript","ASP","Lua","Lisp","Scheme","Ruby","Basic","Cobol","Fortran","Go","Scala","ActionScript","ADA","Boo","Clojure","D","Dart","F#","UnrealScript","Haskell","Matlab","Perl","CoffeeScript"};
 		Random r=new Random();
 		int index=(r.nextInt(10000))%lang.length;
 		return lang[index];
@@ -113,7 +113,7 @@ public class RandomDataProvider {
 				"Gandhi", "Gill", "Gowda", "Guha", "Guneta", "Gupta", "Iyer", "Iyengar", "Jain", "Jha", "Johar", "Joshi", "Kakkar", "Kapoor", "Kaul", 
 				"Kaur", "Khanna", "Khatri", "Kocchar", "Mahajan", "Malik", "Menon", "Mehra", "Mishra", "Mukhopadhyay", "Nair", "Nehru", "Pandey", 
 				"Patel", "Pilla", "Prajapati","Choudhary", "Rana","Batra","Chabra","Bhatt", "Reddy", "Saini","John","Mathews","Agarwal","Dewan","Verma","Chawla",
-				"Anand","Katich","Maran","Krishnan","Sareen","Sethi", "Shah", "Sharma", "Shukla", "Singh", "Sinha", "Tagore", "Talwar", "Tandon", "Trivedi", "Varrier", "Varma", "Verma"};
+				"Anand","Katich","Maran","Krishnan","Sareen","Sethi", "Shah", "Sharma", "Shukla", "Singh", "Sinha", "Tagore", "Talwar", "Tandon", "Trivedi", "Varrier", "Varma", "Verma","Akshay","Anubhav","Katyal"};
 		
 		Random r=new Random();
 		int sname=r.nextInt(100)%26+65;
@@ -199,7 +199,7 @@ public class RandomDataProvider {
 	}
 	public String getRandomPublisher()
 	{
-		String publisher[]={"Tata McGraw Hill","O'Reily","PHI","Pearson","BPB","Katson","Penguin","Orient Paperbacks"};
+		String publisher[]={"Tata McGraw Hill","O'Reily","PHI","Pearson","BPB","Katson","Penguin","Orient Paperbacks","Wrox"};
 		Random r=new Random();
 		int index=(r.nextInt(10000))%publisher.length;
 		return publisher[index];
