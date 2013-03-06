@@ -175,9 +175,11 @@ public class GrainStringParser {
 					type="string";
 					break;
 				case COMPLANG:
-
+<<<<<<< HEAD
+					type="{\"C\",\"C++\",\"C#\",\"Java\",\"Python\",\"php\",\"asm\",\"VHDL\",\"Shell\",\"JavaScript\",\"ASP\",\"Lua\",\"Ruby\"}";
+=======
 					type="{\"C\",\"C++\",\"C#\",\"Java\",\"Python\",\"php\",\"asm\",\"VHDL\",\"Shell\",\"JavaScript\",\"ASP\",\"Lua\",\"Go\",\"Scala\",\"ActionScript\",\"Ada\",\"Boo\",\"Clojure\",\"D\",\"Dart\",\"F#\",\"UnrealScript\",\"Haskell\",\"Matlab\",\"Perl\",\"CofeeScript\"}";
-
+>>>>>>> ea1f4d1a8c7931e4e27dea965cb76709d7e87cd0
 					name="ComputerLanguage_"+i.toString();
 					break;
 				case GROCERY:
