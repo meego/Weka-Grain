@@ -175,7 +175,7 @@ public class GrainStringParser {
 					type="string";
 					break;
 				case COMPLANG:
-					type="{\"C\",\"C++\",\"C#\",\"Java\",\"Python\",\"php\",\"asm\",\"VHDL\",\"Shell\",\"JavaScript\",\"ASP\",\"Lua\"}";
+					type="{\"C\",\"C++\",\"C#\",\"Java\",\"Python\",\"php\",\"asm\",\"VHDL\",\"Shell\",\"JavaScript\",\"ASP\",\"Lua\",\"Ruby\"}";
 					name="ComputerLanguage_"+i.toString();
 					break;
 				case GROCERY:
@@ -188,7 +188,7 @@ public class GrainStringParser {
 					break;
 				case WEATHER:
 					name="WEATHER_"+i.toString();
-					type="{\"Windy\",\"Cloudy\",\"Sunny\",\"Chilly\"}";
+					type="{\"Windy\",\"Cloudy\",\"Sunny\",\"Chilly\",\"Rainy\"}";
 					break;
 				case MARKS:
 					name="MARKS_"+i.toString();
