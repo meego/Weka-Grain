@@ -45,7 +45,7 @@ import javax.swing.JSpinner;
 import javax.swing.JTextArea;
 import javax.swing.JTextPane;
 import javax.swing.UIManager;
-
+import com.wekagrain.*;
 public class MainWindow {
 
 	private JFrame frame;
@@ -109,7 +109,7 @@ public class MainWindow {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		helpFileName="https://github.com/appliedXml/Weka-Grain/wiki";
+		helpFileName="https://github.com/madaan/Weka-Grain/wiki";
 		 fc = new JFileChooser();
 		frame = new JFrame();
 		frame.getContentPane().setBackground(UIManager.getColor("ToolTip.backgroundInactive"));

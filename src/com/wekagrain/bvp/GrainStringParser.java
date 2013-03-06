@@ -198,7 +198,7 @@ public class GrainStringParser {
 					break;
 				case PUBLISHER:
 					name="PUBLISHER_"+i.toString();
-					type="{\"Tata McGraw Hill\",\"O'Reily\",\"PHI\",\"Pearson\",\"BPB\",\"Wrox\"}";
+					type="{\"Tata McGraw Hill\",\"O Reily\",\"PHI\",\"Pearson\",\"BPB\",\"Katson\",\"Penguin\",\"Orient Paperbacks\",\"Wrox\"}";
 					break;
 				
 				}

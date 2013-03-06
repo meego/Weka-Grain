@@ -199,7 +199,7 @@ public class RandomDataProvider {
 	}
 	public String getRandomPublisher()
 	{
-		String publisher[]={"Tata McGraw Hill","O'Reily","PHI","Pearson","BPB","Katson","Penguin","Orient Paperbacks","Wrox"};
+		String publisher[]= {"\'Tata McGraw Hill\'","\'O Reily\'","\'PHI\'","\'Pearson\'","\'BPB\'","\'Katson\'","\'Penguin\'","\'Orient Paperbacks\'","\'Wrox\'"};
 		Random r=new Random();
 		int index=(r.nextInt(10000))%publisher.length;
 		return publisher[index];
